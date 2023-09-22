@@ -27,7 +27,7 @@ export default function Rules() {
         <Text display={'flex'} fontWeight={'bold'}>
           1.&nbsp;
           <Text color="gray.500" fontWeight={'bold'}>
-            Traders should have received{' '}
+            Traders should have received testnet{' '}
             <Text
               display="inline"
               bg="linear-gradient(73.6deg, #34EDB3 2.11%, #00D1FF 100%)"
@@ -45,28 +45,28 @@ export default function Rules() {
             >
               ETH
             </Text>{' '}
-            to your trading wallet
+            to their wallet on Base Goerli
           </Text>
         </Text>
         <Text display={'flex'} fontWeight={'bold'}>
           2.&nbsp;
           <Text color="gray.500" fontWeight={'bold'}>
-            Use{' '}
+            Swap sUSD in the{' '}
             <Text
               display="inline"
               bg="linear-gradient(73.6deg, #34EDB3 2.11%, #00D1FF 100%)"
               backgroundClip="text"
               text-fill-color="transparent"
             >
-              Spot Tab
+              Spot Market
             </Text>{' '}
-            to trade sUSD into other synths
+            if you'd like to trade with coin margin
           </Text>
         </Text>
         <Text display={'flex'} fontWeight={'bold'} mb="8">
           3.&nbsp;
           <Text color="gray.500" fontWeight={'bold'}>
-            Head to one of the integrator front ends to trade:
+            Use one or both of the integrator front ends to trade:
           </Text>
         </Text>
 
@@ -179,28 +179,27 @@ export default function Rules() {
               >
                 ONLY
               </Text>{' '}
-              utilize the $100k susd and 0.25 eth they received at start
+              utilize the $100k sUSD and 0.25 eth they received at start fo competition
             </Text>
           </Text>
           <Text display={'flex'} fontWeight={'bold'}>
             5.&nbsp;
             <Text color="gray.500" fontWeight={'bold'}>
-              Traders can use Margin from sUSD for any accepted synth, by
-              swapping at Spot Swapper
+              Traders can use Margin from sUSD or any accepted synth, by
+              swapping at Spot Market
             </Text>
           </Text>
           <Text display={'flex'} fontWeight={'bold'}>
             6.&nbsp;
             <Text color="gray.500" fontWeight={'bold'}>
-              Traders cannot create or source more sUSD or other synth than the
-              initial $100k
+              Traders cannot create or source more sUSD or other synths
             </Text>
           </Text>
           <Text display={'flex'} fontWeight={'bold'}>
             7.&nbsp;
             <Text color="gray.500" fontWeight={'bold'}>
-              Trading can be done through integrators, directly through
-              contracts or the prototype (not recommended)
+              Trading should be done through integrator front ends or directly through
+              contracts
             </Text>
           </Text>
         </Flex>
@@ -264,15 +263,15 @@ export default function Rules() {
               </Text>
               , above a minimum threshold Prizes are only for genuine trading
               activity, and Synthetix has sole and final discretion, including
-              to eliminate any accounts participating in the competition
+              to eliminate any accounts participating in the competition.
             </Text>
             <Text fontWeight="bold" my="4">
               Bounties/Bugs/Feedback
             </Text>
             <Text>
-              For contracts, using the Synthetix Immunify program scheme, with a
-              discount of 90% For frontends, talk to respective integrator For
-              keepers, no bounties
+              For contracts, the Synthetix Immunify program applies, with a
+              discount of 90%. For frontends, discuss with respective integrator. For
+              keepers, there are no bounties.
             </Text>
           </Flex>
         </Flex>
