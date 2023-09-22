@@ -1,10 +1,12 @@
-import { Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import { Kwenta, Polynomial } from './SVGS';
 import Header from './Header';
+import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 export default function Rules() {
   return (
-    <>
+    <Box overflow="hidden" position="relative">
       <Header />
       <Image
         src="/header-image.png"
@@ -52,6 +54,7 @@ export default function Rules() {
           2.&nbsp;
           <Text color="gray.500" fontWeight={'bold'}>
             Swap sUSD in the{' '}
+                  <Link to="https://synthetix-markets-prototype.vercel.app/spot/markets/ETH">
             <Text
               display="inline"
               bg="linear-gradient(73.6deg, #34EDB3 2.11%, #00D1FF 100%)"
@@ -60,6 +63,7 @@ export default function Rules() {
             >
               Spot Market
             </Text>{' '}
+            </Link>
             if you'd like to trade with coin margin
           </Text>
         </Text>
@@ -71,64 +75,68 @@ export default function Rules() {
         </Text>
 
         <Flex gap="2">
-          <Flex
-            h="270px"
-            gap="5"
-            bg="navy.700"
-            flexDir="column"
-            p="4"
-            borderWidth="1px"
-            borderStyle="solid"
-            borderColor="gray.900"
-            rounded={'base'}
-          >
-            <Flex justifyContent="space-between">
-              <Kwenta />
-              <Text
-                fontSize="xs"
-                bg="gray.700"
-                rounded="base"
-                h="fit-content"
-                p="1"
-              >
-                Perps
+          <Link to="https://v3-perps.kwenta.io/market/?asset=sETH&accountType=cross_margin">
+            <Flex
+              h="270px"
+              gap="5"
+              bg="navy.700"
+              flexDir="column"
+              p="4"
+              borderWidth="1px"
+              borderStyle="solid"
+              borderColor="gray.900"
+              rounded={'base'}
+            >
+              <Flex justifyContent="space-between">
+                <Kwenta />
+                <Text
+                  fontSize="xs"
+                  bg="gray.700"
+                  rounded="base"
+                  h="fit-content"
+                  p="1"
+                >
+                  Perps
+                </Text>
+              </Flex>
+              <Heading>Kwenta</Heading>
+              <Text color="gray.500">
+                Trade crypto, forex, and commodities with up to 50x leverage and
+                deep liquidity.
               </Text>
             </Flex>
-            <Heading>Kwenta</Heading>
-            <Text color="gray.500">
-              Trade crypto, forex, and commodities with up to 50x leverage and
-              deep liquidity.
-            </Text>
-          </Flex>
-          <Flex
-            h="270px"
-            gap="5"
-            bg="navy.700"
-            flexDir="column"
-            p="4"
-            borderWidth="1px"
-            borderStyle="solid"
-            borderColor="gray.900"
-            rounded={'base'}
-          >
-            <Flex justifyContent="space-between">
-              <Polynomial />
-              <Text
-                fontSize="xs"
-                bg="gray.700"
-                rounded="base"
-                h="fit-content"
-                p="1"
-              >
-                Perps
+          </Link>
+          <Link to="https://trade.polynomial.finance/">
+            <Flex
+              h="270px"
+              gap="5"
+              bg="navy.700"
+              flexDir="column"
+              p="4"
+              borderWidth="1px"
+              borderStyle="solid"
+              borderColor="gray.900"
+              rounded={'base'}
+            >
+              <Flex justifyContent="space-between">
+                <Polynomial />
+                <Text
+                  fontSize="xs"
+                  bg="gray.700"
+                  rounded="base"
+                  h="fit-content"
+                  p="1"
+                >
+                  Perps
+                </Text>
+              </Flex>
+              <Heading>Polynomial</Heading>
+              <Text color="gray.500">
+                Trade perps with Polynomial's smart wallet to access up to 50x
+                leverage.
               </Text>
             </Flex>
-            <Heading>Polynomial</Heading>
-            <Text color="gray.500">
-              Trade perps with Polynomial's smart wallet to access up to 50x
-              leverage.
-            </Text>
-          </Flex>
+          </Link>
         </Flex>
 
         <Flex flexDir="column" my="16" gap="4">
@@ -211,7 +219,7 @@ export default function Rules() {
           rounded={'base'}
         >
           <Image src="/circle.png" w="300px" h="100%" />
-          <Flex flexDirection="column">
+          <Flex flexDirection="column" p="4">
             <Heading fontSize="36px" mb="2">
               Prizes
             </Heading>
@@ -269,13 +277,17 @@ export default function Rules() {
               Bounties/Bugs/Feedback
             </Text>
             <Text>
-              For contracts, the Synthetix Immunify program applies, with a
+              For contracts, the     <Link
+                to="https://immunefi.com/bounty/synthetix/"
+                style={{ textDecoration: 'underline' }}
+              >Synthetix Immunify</Link> program applies, with a
               discount of 90%. For frontends, discuss with respective integrator. For
               keepers, there are no bounties.
             </Text>
           </Flex>
         </Flex>
       </Flex>
-    </>
+      <Footer />
+    </Box>
   );
 }

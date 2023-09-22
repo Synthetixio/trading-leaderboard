@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
 import { ChakraProvider, useColorMode } from '@chakra-ui/react';
 import { theme } from './theme.ts';
 import { Global } from '@emotion/react';
@@ -9,9 +8,8 @@ import Rules from './Rules.tsx';
 import Leaderboard from './Leaderboard.tsx';
 
 const router = createBrowserRouter([
-  { path: '/', element: <App /> },
   {
-    path: '/rules',
+    path: '/',
     element: <Rules />,
   },
   {
