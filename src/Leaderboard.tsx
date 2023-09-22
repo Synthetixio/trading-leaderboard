@@ -18,6 +18,7 @@ import { useMemo, useState } from 'react';
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 import Header from './Header';
 import { isAddress } from 'ethers';
+import Footer from './Footer';
 
 export default function Leaderboard() {
   const { data, loading } = useGetLeaderboard();
@@ -207,6 +208,7 @@ export default function Leaderboard() {
           </Box>
         </Box>
       </Flex>
+      <Footer />
     </>
   );
 }
