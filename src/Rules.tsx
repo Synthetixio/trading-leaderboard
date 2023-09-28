@@ -21,9 +21,11 @@ export default function Rules() {
           Welcome to the Synthetix Perps <br /> v3 testnet trading competition
         </Heading>
 
-        <Button colorScheme="cyan" w="fit-content">
-          Learn More
+      
+        <Button colorScheme="cyan" w="fit-content" onClick={() => window.open('https://blog.synthetix.io/synthetix-perps-v3-testnet-trading-competition', '_blank')}>
+        Learn More
         </Button>
+
 
         <Heading mt="100px">General instructions</Heading>
         <Text display={'flex'} fontWeight={'bold'}>
