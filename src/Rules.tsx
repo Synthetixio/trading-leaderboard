@@ -248,7 +248,7 @@ export default function Rules() {
                 backgroundClip="text"
                 text-fill-color="transparent"
               >
-                1.1.1970
+                {new Date(1696287600 * 1000).toLocaleDateString()}
               </Text>
             </Text>
           </Text>
@@ -262,14 +262,24 @@ export default function Rules() {
                 backgroundClip="text"
                 text-fill-color="transparent"
               >
-                1.1.1970
+                {new Date(1698037200 * 1000).toLocaleDateString()}
               </Text>
             </Text>
           </Text>
           <Text display={'flex'} fontWeight={'bold'}>
             3.&nbsp;
             <Text color="gray.500" fontWeight={'bold'}>
-              Report feedback to DISCORD LINK
+              Report feedback to{' '}
+              <Text
+                display="inline"
+                bg="linear-gradient(73.6deg, #34EDB3 2.11%, #00D1FF 100%)"
+                backgroundClip="text"
+                text-fill-color="transparent"
+              >
+                <Link to="https://discord.com/channels/413890591840272394/1158430410318037143">
+                  DISCORD
+                </Link>
+              </Text>
             </Text>
           </Text>
           <Text display={'flex'} fontWeight={'bold'}>
