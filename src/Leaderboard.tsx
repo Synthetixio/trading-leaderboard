@@ -75,6 +75,8 @@ export default function Leaderboard() {
                 <Tr>
                   <Th>Rank</Th>
                   <Th>User</Th>
+                  <Th>Trades</Th>
+                  <Th>Volume</Th>
                   <Th>PnL</Th>
                 </Tr>
               </Thead>
@@ -83,11 +85,13 @@ export default function Leaderboard() {
                   <Tr key={user.address}>
                     <Td>#{user.rank}</Td>
                     <Td>{user.address}</Td>
+                    <Td>{user.trades}</Td>
+                    <Td>${user.volume.toFixed(2)}</Td>
                     <Td
                       color={user.pnl_pct >= 0 ? 'green.500' : 'red.500'}
                       fontWeight={700}
                     >
-                      {user.pnl_pct * 100}%
+                      {(user.pnl_pct * 100).toFixed(2)}%
                     </Td>
                   </Tr>
                 ))}
@@ -159,6 +163,36 @@ export default function Leaderboard() {
                     cursor="pointer"
                     userSelect="none"
                     onClick={() => {
+                      if (sortOption[0] === 'trades') {
+                        setSortOption(['trades', !sortOption[1]]);
+                      } else {
+                        setSortOption(['trades', true]);
+                      }
+                    }}
+                  >
+                    Trades
+                    {sortOption[0] === 'trades' &&
+                      (sortOption[1] ? <ChevronUpIcon /> : <ChevronDownIcon />)}
+                  </Th>
+                  <Th
+                    cursor="pointer"
+                    userSelect="none"
+                    onClick={() => {
+                      if (sortOption[0] === 'volume') {
+                        setSortOption(['volume', !sortOption[1]]);
+                      } else {
+                        setSortOption(['volume', true]);
+                      }
+                    }}
+                  >
+                    Volume
+                    {sortOption[0] === 'volume' &&
+                      (sortOption[1] ? <ChevronUpIcon /> : <ChevronDownIcon />)}
+                  </Th>
+                  <Th
+                    cursor="pointer"
+                    userSelect="none"
+                    onClick={() => {
                       if (sortOption[0] === 'pnl') {
                         setSortOption(['pnl', !sortOption[1]]);
                       } else {
@@ -184,6 +218,16 @@ export default function Leaderboard() {
                         a.address.localeCompare(b.address) *
                         (sortOption[1] ? 1 : -1)
                       );
+                    } else if (sortOption[0] === 'trades') {
+                      return (
+                        (a.trades > b.trades ? 1 : -1) *
+                        (sortOption[1] ? 1 : -1)
+                      );
+                    } else if (sortOption[0] === 'volume') {
+                      return (
+                        (a.volume > b.volume ? 1 : -1) *
+                        (sortOption[1] ? 1 : -1)
+                      );
                     } else {
                       return (
                         (a.pnl_pct < b.pnl_pct ? 1 : -1) *
@@ -195,11 +239,13 @@ export default function Leaderboard() {
                     <Tr key={user.address.concat(String(index))}>
                       <Td>#{user.rank}</Td>
                       <Td>{user.address}</Td>
+                      <Td>{user.trades}</Td>
+                      <Td>${user.volume.toFixed(2)}</Td>
                       <Td
                         color={user.pnl_pct >= 0 ? 'green.500' : 'red.500'}
                         fontWeight={700}
                       >
-                        {user.pnl_pct * 100}%
+                        {(user.pnl_pct * 100).toFixed(2)}%
                       </Td>
                     </Tr>
                   ))}
