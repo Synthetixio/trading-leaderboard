@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const useGetLeaderboard = () => {
   const [loading, setLoading] = useState(false);
@@ -16,10 +16,10 @@ export const useGetLeaderboard = () => {
     setLoading(true);
 
     fetch(
-      "https://ipfs.synthetix.io/ipns/k2k4r8lfgmmsal4y0yy8lt2rvr81mysatckaopta9s48n0rvjagy9ie9",
+      'https://ipfs.synthetix.io/ipns/k2k4r8lfgmmsal4y0yy8lt2rvr81mysatckaopta9s48n0rvjagy9ie9',
       {
-        method: "GET",
-      },
+        method: 'GET',
+      }
     )
       .then((data) => {
         data.json().then((data) => {
@@ -29,5 +29,8 @@ export const useGetLeaderboard = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  return { data: json, loading };
+  return {
+    data: json,
+    loading,
+  };
 };
