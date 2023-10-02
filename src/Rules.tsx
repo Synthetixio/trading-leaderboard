@@ -294,7 +294,7 @@ export default function Rules() {
               >
                 ONLY
               </Text>{' '}
-              utilize the $100k sUSD and 0.25 eth they received at start fo
+              utilize the $100k sUSD and 0.2 eth they received at start fo
               competition
             </Text>
           </Text>
