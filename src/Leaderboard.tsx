@@ -50,7 +50,6 @@ export default function Leaderboard() {
     return <Text>Loading...</Text>;
   }
 
-  console.log(data);
   return (
     <>
       <Header />
