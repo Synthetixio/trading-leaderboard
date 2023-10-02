@@ -9,6 +9,8 @@ export const useGetLeaderboard = () => {
       accountId: string;
       address: string;
       pnl_pct: number;
+      trades: number;
+      volume: number;
     }[];
   } | null>(null);
 
