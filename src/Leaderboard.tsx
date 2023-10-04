@@ -86,7 +86,7 @@ export default function Leaderboard() {
                     <Td>#{user.rank}</Td>
                     <Td>{user.address}</Td>
                     <Td>{user.trades}</Td>
-                    <Td>${user.volume.toFixed(2)}</Td>
+                    <Td>${Number(user.volume.toFixed(2)).toLocaleString()}</Td>
                     <Td
                       color={user.pnl_pct >= 0 ? 'green.500' : 'red.500'}
                       fontWeight={700}
@@ -240,7 +240,9 @@ export default function Leaderboard() {
                       <Td>#{user.rank}</Td>
                       <Td>{user.address}</Td>
                       <Td>{user.trades}</Td>
-                      <Td>${user.volume.toFixed(2)}</Td>
+                      <Td>
+                        ${Number(user.volume.toFixed(2)).toLocaleString()}
+                      </Td>
                       <Td
                         color={user.pnl_pct >= 0 ? 'green.500' : 'red.500'}
                         fontWeight={700}
