@@ -65,7 +65,7 @@ export default function Rules() {
           2.&nbsp;
           <Text color="gray.500" fontWeight={'bold'}>
             Swap sUSD in the{' '}
-            <Link to="https://synthetix-markets-prototype.vercel.app/spot/markets/ETH">
+            <Link to="https://synthetix-markets-prototype.snxdev.io/spot/markets/ETH">
               <Text
                 display="inline"
                 bg="linear-gradient(73.6deg, #34EDB3 2.11%, #00D1FF 100%)"
